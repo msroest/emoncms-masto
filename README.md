@@ -7,6 +7,7 @@ Example status:
 
 ## Configuration
 This app is configured via environment variables:
+  * CULTURE - .NET culture name to use for numeric and currency formating
   * BOT_NAME - Name of the bot to ouput in the mastodon status message
   * HASHTAGS - Additional hashtags to add to the status
   * EMONCMS_BASE_URI - Base url of your cloud or self hosted EmonCMS intall
