@@ -17,7 +17,7 @@ This app is configured via environment variables:
   * EMONCMS_EXPORT_KWH_FEED_ID - Feed ID for export kWh
   * RATE - Power rate in fractional dollars (ie 28.5¢/kWh would be configured as 0.285)
   * MASTODON_URI - URI for the mastodon instance (ie https://botsin.space)
-  * MASTODON_API_KEY - API Key for API application [see below](#setting_up_mastodon_api_application)
+  * MASTODON_API_KEY - API Key for API application [see below](#setting-up-mastodon-api-application)
 
 ## Future development
 * Adding graphs of the day of generation/use similar to the [Solar PV App](https://docs.openenergymonitor.org/applications/solar-pv.html)
