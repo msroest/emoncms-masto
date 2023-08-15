@@ -8,6 +8,7 @@ Example status:
 ## Configuration
 This app is configured via environment variables:
   * CULTURE - .NET culture name to use for numeric and currency formating
+  * TZ - Set timezone within the container
   * BOT_NAME - Name of the bot to ouput in the mastodon status message
   * HASHTAGS - Additional hashtags to add to the status
   * EMONCMS_BASE_URI - Base url of your cloud or self hosted EmonCMS intall
@@ -54,7 +55,7 @@ docker run \
    -e EMONCMS_EXPORT_KWH_FEED_ID=<export feed id> \
    -e RATE=<power rate> \
    -e MASTODON_URI=https://<mastodon host> \
-   -e MASTODON_URI=<mastodon app access token> \
+   -e MASTODON_API_KEY=<mastodon app access token> \
    -n emoncms-masto \
    msroest/emoncms-masto
 ```
