@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Mastonet;
+using System.Globalization;
 
 HttpClient client = new HttpClient();
 
@@ -7,6 +8,9 @@ var config = new ConfigurationBuilder()
 .AddJsonFile("appsettings.json", true)
 .AddEnvironmentVariables()
 .Build();
+if(!string.IsNullOrEmpty(config["CULTURE"])) {
+    CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(config["CULTURE"]!);
+}
 Uri? emonBaseUri = null;
 if (string.IsNullOrEmpty(config["EMONCMS_BASE_URI"]) || !Uri.TryCreate(config["EMONCMS_BASE_URI"], UriKind.Absolute, out emonBaseUri))
 {
