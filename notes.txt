@@ -1,0 +1,3 @@
+Client Key: OZvIqtYS6wHGUlkX7JCxBUR44zR9RZLfkvAqINGa9yc
+Client Secret: vIatizzKkjksOmer3BBQthges-9QbWZwYS2pUfEqATs
+Auth Token: 3Wi8hdIKMi4K7ztCJfYqI20l3J9H4WbwW71gAjU4fHY
