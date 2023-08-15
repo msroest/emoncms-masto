@@ -18,6 +18,7 @@ This app is configured via environment variables:
   * RATE - Power rate in fractional dollars (ie 28.5¢/kWh would be configured as 0.285)
   * MASTODON_URI - URI for the mastodon instance (ie https://botsin.space)
   * MASTODON_API_KEY - API Key for API application [see below](#setting-up-mastodon-api-application)
+  * PUBLISH - Set this to false to just output the post to STDOUT and bypass sending to mastodon, useful for testing
 
 ## Future development
 * Adding graphs of the day of generation/use similar to the [Solar PV App](https://docs.openenergymonitor.org/applications/solar-pv.html)
@@ -42,7 +43,8 @@ This app is configured via environment variables:
 ```
 docker run \
    -it --rm \
-   -e BOT_NAME=Test Bot \
+   -e BOT_NAME="Test Bot" \
+   -e HASHTAGS="#solar" \
    -e EMONCMS_BASE_URI=https://<emoncms host/ip>:port\
    -e EMONCMS_READ_API_KEY=<read api key> \
    -e EMONCMS_SOLAR_KWH_FEED_ID=<solar feed id>\
