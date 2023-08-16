@@ -25,7 +25,8 @@ This app is configured via environment variables:
   * PUBLISH - Set this to false to just output the post to STDOUT and bypass sending to mastodon, useful for testing
 
 ## Future development
-* Adding graphs of the day of generation/use similar to the [Solar PV App](https://docs.openenergymonitor.org/applications/solar-pv.html)
+* Make graphs/output more configurable
+* Add hourly graphs/statistics
 
 ## Running/Developing
 1. dotnet restore
