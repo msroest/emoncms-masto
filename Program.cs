@@ -104,6 +104,6 @@ if (publish)
     {
         var media = await mastoClient.UploadMedia(fs, $"{yesterday.ToString("yyyy-MM-dd")}.png",
         $"Graph of Solar generation and home power usage of a home in Calgary, Alberta, Canada for {yesterday.ToString("yyyy-MM-dd")}");
-        await mastoClient.PublishStatus(message, visibility: Visibility.Private, mediaIds: new[] { media.Id });
+        await mastoClient.PublishStatus(message, visibility: Visibility.Public, mediaIds: new[] { media.Id });
     }
 }
