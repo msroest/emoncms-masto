@@ -15,6 +15,8 @@ This app is configured via environment variables:
   * EMONCMS_READ_API_KEY - Readonly API key for EmonCMS
   * EMONCMS_SOLAR_KWH_FEED_ID - Feed ID for solar generation kWh
   * EMONCMS_USE_KWH_FEED_ID - Feed ID for household usage kWh
+  * EMONCMS_SOLAR_FEED_ID - Feed ID for solar generation
+  * EMONCMS_USE_FEED_ID - Feed ID for household usage
   * EMONCMS_IMPORT_KWH_FEED_ID - Feed ID for import kWh
   * EMONCMS_EXPORT_KWH_FEED_ID - Feed ID for export kWh
   * RATE - Power rate in fractional dollars (ie 28.5¢/kWh would be configured as 0.285)
@@ -49,8 +51,10 @@ docker run \
    -e HASHTAGS="#solar" \
    -e EMONCMS_BASE_URI=https://<emoncms host/ip>:port\
    -e EMONCMS_READ_API_KEY=<read api key> \
-   -e EMONCMS_SOLAR_KWH_FEED_ID=<solar feed id>\
-   -e EMONCMS_USE_KWH_FEED_ID=<use feed id> \
+   -e EMONCMS_SOLAR_KWH_FEED_ID=<solar kwh feed id>\
+   -e EMONCMS_USE_KWH_FEED_ID=<use kwh feed id> \
+   -e EMONCMS_SOLAR_FEED_ID=<solar feed id>\
+   -e EMONCMS_USE_FEED_ID=<use feed id> \
    -e EMONCMS_IMPORT_KWH_FEED_ID=<import feed id> \
    -e EMONCMS_EXPORT_KWH_FEED_ID=<export feed id> \
    -e RATE=<power rate> \
