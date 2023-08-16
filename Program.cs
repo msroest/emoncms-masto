@@ -34,6 +34,7 @@ if (string.IsNullOrEmpty(config["EMONCMS_SOLAR_KWH_FEED_ID"]) ||
    string.IsNullOrEmpty(config["EMONCMS_USE_FEED_ID"]))
 {
     Console.Error.WriteLine("Missing required feed id");
+    Environment.Exit(1);
 }
 
 var emonClient = new emoncmsmasto.EmonCMS(emonBaseUri, config["EMONCMS_READ_API_KEY"]!);
