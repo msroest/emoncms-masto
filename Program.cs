@@ -92,7 +92,7 @@ plt.Margins(0, 0.05);
 plt.Legend(true);
 var legend = plt.GetLegend();
 legend.Alignment = Alignment.UpperLeft;
-legend.Font.Size = 18;
+legend.Font.Size = 36;
 legend.Font.Color = Colors.White;
 legend.BackgroundFill.Color = new Color(51, 51, 51);
 
