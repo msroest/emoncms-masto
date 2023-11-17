@@ -27,13 +27,13 @@ jobs:
             chmod a+x ~/.docker/cli-plugins/docker-buildx
             docker run --rm --privileged linuxkit/binfmt:a17941b47f5cb262638cfb49ffc59ac5ac2bf334
             docker context create multi-arch-build
-            docker buildx create --use multi-arch-build --platform linux/arm64,linux/amd64
+            docker buildx create --use multi-arch-build --platform linux/amd64
             ADDITIONAL_PARAMETERS=""
             if [ "${CIRCLE_BRANCH}" == "main" ]; then
               ADDITIONAL_PARAMETERS="--push"
               echo $DOCKERPASS | docker login --username $DOCKERLOGIN --password-stdin
             fi
-            docker buildx build $ADDITIONAL_PARAMETERS --platform linux/arm64,linux/amd64 -t msroest/emoncms-masto:latest -t msroest/emoncms-masto:$TAG .
+            docker buildx build $ADDITIONAL_PARAMETERS --platform linux/amd64 -t msroest/emoncms-masto:latest -t msroest/emoncms-masto:$TAG .
             
             docker images
             if [ "${CIRCLE_BRANCH}" == "main" ]; then
