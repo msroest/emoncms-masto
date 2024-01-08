@@ -91,7 +91,7 @@ plt.AutoScale();
 plt.Margins(0, 0.05);
 plt.Legend.IsVisible = true;
 var legend = plt.Legend;
-legend.Alignment = Alignment.UpperLeft;
+legend.Location = Alignment.UpperLeft;
 legend.Font.Size = 36;
 legend.Font.Color = Colors.White;
 legend.BackgroundFill.Color = new Color(51, 51, 51);
