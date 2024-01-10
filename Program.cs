@@ -80,18 +80,18 @@ useFill.Label = "Use";
 
 useFill.FillStyle.Color = Colors.Blue.WithAlpha(175);
 solarFill.FillStyle.Color = Colors.Gold;
-plt.AxisStyler.DateTimeTicks(Edge.Bottom);
+plt.Axes.DateTimeTicks(Edge.Bottom);
 plt.Style.Background(figure: new Color(51, 51, 51), data: new Color(51, 51, 51));
 plt.Style.ColorAxes(Color.FromHex("#FFFFFF"));
 plt.Style.ColorGrids(Color.FromHex("#FFFFFF"));
-plt.YAxis.Label.Text = "Watts";
+plt.Axes.Left.Label.Text = "Watts";
 
 plt.Title($"Solar Generation for {yesterday.ToString("yyyy/MM/dd")}");
-plt.AutoScale();
-plt.Margins(0, 0.05);
+plt.Axes.AutoScale();
+plt.Axes.Margins(0, 0.05);
 plt.Legend.IsVisible = true;
 var legend = plt.Legend;
-legend.Alignment = Alignment.UpperLeft;
+legend.Location = Alignment.UpperLeft;
 legend.Font.Size = 36;
 legend.Font.Color = Colors.White;
 legend.BackgroundFill.Color = new Color(51, 51, 51);
