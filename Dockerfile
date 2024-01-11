@@ -15,7 +15,7 @@ RUN dotnet restore -a $TARGETARCH
 COPY * .
 RUN dotnet publish -a $TARGETARCH --no-restore -c Release -o /publish
 
-FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/runtime:8.0 as runtime
+FROM mcr.microsoft.com/dotnet/runtime:8.0 as runtime
 ENV DOTNET_RUNNING_IN_CONTAINER=true
 ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=0
 ENV CULTURE=en-us
