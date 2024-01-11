@@ -45,3 +45,4 @@ msbuild.wrn
 appsettings.json
 publish
 localtest.sh
+testcontiner.sh
