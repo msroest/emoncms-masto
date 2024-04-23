@@ -75,8 +75,8 @@ var plt = new ScottPlot.Plot();
 var solarFill = plt.Add.FillY(solarPowerFeed.Select(x => x.dateTime.ToOADate()).ToArray(), solarPowerFeed.Select(x => x.reading).ToArray(), solarPowerFeed.Select(x => 0.0).ToArray());
 var useFill = plt.Add.FillY(usePowerFeed.Select(x => x.dateTime.ToOADate()).ToArray(), usePowerFeed.Select(x => x.reading).ToArray(), usePowerFeed.Select(x => 0.0).ToArray());
 
-solarFill.Label = "Solar";
-useFill.Label = "Use";
+solarFill.LegendText = "Solar";
+useFill.LegendText = "Use";
 
 useFill.FillStyle.Color = Colors.Blue.WithAlpha(175);
 solarFill.FillStyle.Color = Colors.Gold;
@@ -92,10 +92,10 @@ plt.Axes.AutoScale();
 plt.Axes.Margins(0, 0.05);
 plt.Legend.IsVisible = true;
 var legend = plt.Legend;
-legend.Location = Alignment.UpperLeft;
-legend.Font.Size = 36;
-legend.Font.Color = Colors.White;
-legend.BackgroundFill.Color = new Color(51, 51, 51);
+legend.Alignment = Alignment.UpperLeft;
+legend.FontSize = 36;
+legend.FontColor = Colors.White;
+legend.BackgroundColor= new Color(51, 51, 51);
 
 
 plt.SavePng("./output/generation.png", 1920, 1080);
