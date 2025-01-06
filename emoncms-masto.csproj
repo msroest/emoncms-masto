@@ -18,7 +18,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.JSON" Version="9.0.0" />
     <PackageReference Include="ScottPlot" Version="5.0.47" />
-    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.88.9" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="3.116.1" />
     <PackageReference Include="System.Text.Json" Version="9.0.0" />
     <Reference Include="ScottPlot">
       <HintPath>.\ScottPlot.dll</HintPath>
