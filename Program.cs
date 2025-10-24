@@ -65,7 +65,7 @@ Math.Round(solarFeed[1].reading - solarFeed[0].reading, 2),
 Math.Round(useFeed[1].reading - useFeed[0].reading, 2),
 import,
 export,
-rate.ToString("C3"),
+rate.ToString("C4"),
 (import * rate).ToString("C"),
 (export * rate).ToString("C"),
 config["HASHTAGS"]
